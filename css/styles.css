@@ -166,6 +166,15 @@ a {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: white;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon-container {
   align-items: center;
   background-color: #f3f9fa;
@@ -174,6 +183,10 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+
+.icon-container__accent {
+  background-color: var(--color-accent);
 }
 
 /* Buttons */
@@ -422,5 +435,52 @@ a {
 
   .quote__company {
     font-size: 1.6rem;
+  }
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 5rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+.testimonial .quote {
+  margin-left: 6rem;
+}
+
+@media screen and (min-width: 786px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
   }
 }
